@@ -4,9 +4,12 @@ require("@nomicfoundation/hardhat-toolbox");
 
 
 /** @type import('hardhat/config').HardchatUserConfig */
-const GOERLI_PRIVATE_KEY = "";
+let dotenv = require('dotenv')
+dotenv.config({ path: "./.env" })
 
-const ETH_KEY = "";
+const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY;
+
+const ETHERSCAN_API_KEY =process.env.ETHERSCAN_API_KEY;
 
 module.exports = {
   solidity: "0.8.18",
@@ -24,6 +27,6 @@ module.exports = {
     },
 
     etherscan: {
-      apiKey: ETH_KEY, 
+      apiKey: ETHERSCAN_API_KEY, 
     },
 };
