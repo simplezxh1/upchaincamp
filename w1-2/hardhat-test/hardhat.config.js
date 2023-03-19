@@ -2,8 +2,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 //require("@nomiclabs/hardhat-waffle");
 
-
-/** @type import('hardhat/config').HardchatUserConfig */
 let dotenv = require('dotenv')
 dotenv.config({ path: "./.env" })
 
@@ -20,7 +18,7 @@ module.exports = {
       chainId: 31337,
     },
     goerli: {
-      url: "https://eth-goerli.g.alchemy.com/v2/F4_vkC1Fi6wNw5DzJ3tcHYlrlX8NBtaq",
+      url: "https://eth-goerli.api.onfinality.io/public",
       accounts:[GOERLI_PRIVATE_KEY],
       chainId:5,
     },
